@@ -1,0 +1,160 @@
+/* styles.css */
+
+/* Sección de bienvenida */
+#inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.bienvenida-container {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    max-width: 1000px;
+}
+
+/* Imagen de bienvenida */
+#bienvenido-imagen {
+    max-width: 300px; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.5s ease, left 0.5s ease, top 0.5s ease; /* Animaciones */
+    position: relative;
+}
+
+/* Contenedor del texto */
+.bienvenida-texto {
+    margin-left: 20px; /* Espacio entre la imagen y el texto */
+}
+
+
+/* Estilo para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Imagen dentro del modal */
+.modal-contenido {
+    max-width: 90%;
+    max-height: 90%;
+    margin: 5% auto;
+    display: block;
+}
+
+/* Estilo para el botón de cerrar */
+.cerrar {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    transition: transform 0.3s ease-in-out; /* Suaviza el movimiento */
+}
+
+footer.hidden {
+    transform: translateY(100px); /* Mueve el pie de página hacia abajo cuando está "oculto" */
+}
+
+h2 {
+    color: #333;
+}
+
+ul {
+    list-style-type: square;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+/* Estilo para el selector de idioma */
+select {
+    padding: 5px 10px;
+    font-size: 16px;
+    margin-left: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+/* Otros estilos previos siguen siendo los mismos... */
+
