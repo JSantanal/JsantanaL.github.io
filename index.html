@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biografía de Jhanciel F Santana Leon</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="titulo">Biografía de Jhanciel F Santana Leon</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio" id="inicio-link">Inicio</a></li>
+                <li><a href="#acerca" id="acerca-link">Acerca de</a></li>
+                <li><a href="#logros" id="logros-link">Logros</a></li>
+                <li><a href="#contacto" id="contacto-link">Contacto</a></li>
+            </ul>        
+            <!-- Selector de idiomas -->
+            <select id="idioma" onchange="cambiarIdioma()">
+                <option value="es">Español</option>
+                <option value="en">English</option>
+            </select>
+        </nav>
+    </header>
+
+    <section id="inicio">
+        <div class="bienvenida-container">
+            <img id="bienvenido-imagen" src="me.jpg" alt="Imagen de bienvenida" onclick="abrirModal()" />
+            <div class="bienvenida-texto">
+                <h2 id="bienvenido">Bienvenido a mi biografía</h2>
+                <p id="descripcion">Hola, soy Jhanciel F Santana Leon, un apasionado por la tecnología y el desarrollo web.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Modal para mostrar la imagen más grande -->
+    <div id="modal-imagen" class="modal">
+        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+        <img class="modal-contenido" id="img-modal" src="" alt="Imagen ampliada">
+    </div>
+
+    <section id="acerca">
+        <h2 id="acerca-titulo">Acerca de mí</h2>
+        <p id="acerca-descripcion">Nací en Moca Las Lagunas, Republica Dominicana, y desde joven me e interesado por la programación. Estoy en desarrollo de mi propia empresa de ternologia y programacion.</p>
+        <p id="acerca-detalle">Mi especialidad es el desarrollo web, aunque también tengo experiencia en aplicaciones móviles y Programacion de Video Juegos.</p>
+    </section>
+
+    <section id="logros">
+        <h2 id="logros-titulo">Logros y proyectos</h2>
+        <ul>
+            <li id="logro1">Desarrollé Esta Web.</li>
+            <li id="logro2">Cree mi propia Red social Jcomments.</li>
+            <li id="logro3">He logrado acomular mucho conocimiento.</li>
+        </ul>
+    </section>
+
+    <section id="contacto">
+        <h2 id="contacto-titulo">Contacto</h2>
+        <p id="contacto-descripcion">Si deseas contactarme, puedes hacerlo a través de mis redes sociales o enviando un correo electrónico:</p>
+        <p><strong id="email">Email:</strong> Jhancielsl@gmail.com</p>
+        <p><strong id="instragram">Instragram:</strong> @santana_jhanciel</p>
+        
+    </section>
+
+    <footer id="footer">
+        <p>&copy; 2025 Jhanciel F Santana Leon. Todos los derechos reservados.</p>
+    </footer>    
+
+    <script src="script.js"></script>
+</body>
+</html>
