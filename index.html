@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biografía de Jhanciel F Santana Leon</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header id="header">
+        <div class="header-container">
+            <h1 id="titulo">JF Santana</h1>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#inicio" id="inicio-link" class="nav-link">Inicio</a></li>
+                    <li><a href="#acerca" id="acerca-link" class="nav-link">Acerca</a></li>
+                    <li><a href="#cursos" id="cursos-link" class="nav-link">Cursos</a></li>
+                    <li><a href="#portafolio" id="portafolio-link" class="nav-link">Portafolio</a></li>
+                    <li><a href="#blog" id="blog-link" class="nav-link">Blog</a></li>
+                    <li><a href="#donaciones" id="donaciones-link" class="nav-link">Donar</a></li>
+                    <li><a href="#contacto" id="contacto-link" class="nav-link">Contacto</a></li>
+                </ul>
+                <div class="nav-right">
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <select id="idioma" onchange="cambiarIdioma()" class="idioma-selector">
+                        <option value="es">🇪🇸 ES</option>
+                        <option value="en">🇺🇸 EN</option>
+                    </select>
+                </div>
+            </nav>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección Hero -->
+    <section id="inicio" class="hero">
+        <div class="hero-content fade-in">
+            <img id="bienvenido-imagen" src="me.jpg" alt="Jhanciel F Santana Leon" class="hero-image"
+                onclick="abrirModal()" />
+            <div class="hero-text">
+                <h2 id="bienvenido" class="hero-title">Bienvenido a mi Mundo</h2>
+                <p id="descripcion" class="hero-subtitle">Soy Jhanciel F Santana Leon, Desarrollador Web Apasionado</p>
+                <div class="hero-buttons">
+                    <a href="#contacto" id="btn-contacto" class="btn btn-primary">Contáctame</a>
+                    <a href="#portafolio" id="btn-portafolio" class="btn btn-secondary">Ver Portafolio</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>↓</span>
+        </div>
+    </section>
+
+    <!-- Modal para mostrar la imagen más grande -->
+    <div id="modal-imagen" class="modal">
+        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+        <img class="modal-contenido" id="img-modal" src="" alt="Imagen ampliada">
+    </div>
+
+    <!-- Sección Acerca de -->
+    <section id="acerca" class="about">
+        <div class="container fade-in-up">
+            <h2 id="acerca-titulo">Acerca de mí</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p id="acerca-descripcion">Nací en Moca Las Lagunas, República Dominicana, y desde joven me he
+                        interesado por la programación. Estoy en desarrollo de mi propia empresa de tecnología y
+                        programación.</p>
+                    <p id="acerca-detalle">Mi especialidad es el desarrollo web, aunque también tengo experiencia en
+                        aplicaciones móviles y programación de videojuegos.</p>
+                    <div class="skills-section">
+                        <h3 id="habilidades-titulo">Habilidades Principales</h3>
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <i class="fas fa-code"></i>
+                                <p id="skill-web">Desarrollo Web</p>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fas fa-mobile-alt"></i>
+                                <p id="skill-mobile">Aplicaciones Móviles</p>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fas fa-gamepad"></i>
+                                <p id="skill-games">Videojuegos</p>
+                            </div>
+                            <div class="skill-card">
+                                <i class="fas fa-database"></i>
+                                <p id="skill-db">Bases de Datos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Galería de Fotos -->
+    <section id="galeria" class="gallery">
+        <div class="container fade-in-up">
+            <h2 id="galeria-titulo">Galería Personal</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://cdn.discordapp.com/attachments/1401631425299747038/1458527166412099677/outservice.png?ex=695ff6c6&is=695ea546&hm=9a354de06474575d479cfc16f9a9b6406fc547f4632ccb141de32336d7f44b0b&"
+                        alt="Developer Lifestyle" onclick="abrirModal(this.src)">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://cdn.discordapp.com/attachments/1401631425299747038/1458527166412099677/outservice.png?ex=695ff6c6&is=695ea546&hm=9a354de06474575d479cfc16f9a9b6406fc547f4632ccb141de32336d7f44b0b&"
+                        alt="Coding Setup" onclick="abrirModal(this.src)">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://cdn.discordapp.com/attachments/1401631425299747038/1458527166412099677/outservice.png?ex=695ff6c6&is=695ea546&hm=9a354de06474575d479cfc16f9a9b6406fc547f4632ccb141de32336d7f44b0b&"
+                        alt="Coffee and Code" onclick="abrirModal(this.src)">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Portafolio -->
+    <section id="cursos" class="cursos">
+        <div class="container fade-in-up">
+            <h2 id="cursos-titulo">Aprende a Programar</h2>
+            <p id="cursos-subtitulo">Cursos diseñados para todos los niveles - Desde principiante hasta avanzado</p>
+            <div class="cursos-grid">
+                <div class="curso-card slide-in-up">
+                    <div class="curso-badge" id="curso-badge-1">Principiante</div>
+                    <i class="fab fa-free-code-camp"></i>
+                    <h3 id="curso1-titulo">FreeCodeCamp: Web Design</h3>
+                    <p id="curso1-desc">Certificación completa de diseño web responsivo.</p>
+                    <div class="curso-info">
+                        <span id="curso1-duracion">⏱️ A tu ritmo</span>
+                        <span id="curso1-nivel">👤 Principiante</span>
+                    </div>
+                    <div class="curso-precio">
+                        <span id="curso1-precio">GRATIS</span>
+                    </div>
+                    <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/" target="_blank"
+                        class="btn btn-primary btn-curso" id="btn-curso1">Empezar Gratis</a>
+                </div>
+
+                <div class="curso-card slide-in-up">
+                    <div class="curso-badge popular" id="curso-badge-2">Más Popular</div>
+                    <i class="fas fa-js-square"></i>
+                    <h3 id="curso2-titulo">JavaScript Algorithms</h3>
+                    <p id="curso2-desc">Domina las estructuras de datos y algoritmos en JS.</p>
+                    <div class="curso-info">
+                        <span id="curso2-duracion">⏱️ 300 horas</span>
+                        <span id="curso2-nivel">👤 Intermedio</span>
+                    </div>
+                    <div class="curso-precio">
+                        <span id="curso2-precio">GRATIS</span>
+                    </div>
+                    <a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/"
+                        target="_blank" class="btn btn-primary btn-curso" id="btn-curso2">Empezar Gratis</a>
+                </div>
+
+                <div class="curso-card slide-in-up">
+                    <div class="curso-badge" id="curso-badge-3">Avanzado</div>
+                    <i class="fas fa-project-diagram"></i>
+                    <h3 id="curso3-titulo">The Odin Project</h3>
+                    <p id="curso3-desc">Curriculum completo Full Stack Open Source.</p>
+                    <div class="curso-info">
+                        <span id="curso3-duracion">⏱️ Completo</span>
+                        <span id="curso3-nivel">👤 Avanzado</span>
+                    </div>
+                    <div class="curso-precio">
+                        <span id="curso3-precio">GRATIS</span>
+                    </div>
+                    <a href="https://www.theodinproject.com/" target="_blank" class="btn btn-primary btn-curso"
+                        id="btn-curso3">Ver Curso</a>
+                </div>
+
+                <div class="curso-card slide-in-up">
+                    <div class="curso-badge" id="curso-badge-4">Introducción</div>
+                    <i class="fas fa-python"></i>
+                    <h3 id="curso4-titulo">Python for Everybody</h3>
+                    <p id="curso4-desc">Aprende Python desde cero con este curso popular.</p>
+                    <div class="curso-info">
+                        <span id="curso4-duracion">⏱️ Variable</span>
+                        <span id="curso4-nivel">👤 Principiante</span>
+                    </div>
+                    <div class="curso-precio">
+                        <span id="curso4-precio">GRATIS</span>
+                    </div>
+                    <a href="https://www.py4e.com/" target="_blank" class="btn btn-primary btn-curso"
+                        id="btn-curso4">Empezar</a>
+                </div>
+
+                <div class="curso-card slide-in-up">
+                    <div class="curso-badge" id="curso-badge-5">Google</div>
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h3 id="curso5-titulo">Google Web.dev</h3>
+                    <p id="curso5-desc">Cursos modernos de web development por Google.</p>
+                    <div class="curso-info">
+                        <span id="curso5-duracion">⏱️ Variable</span>
+                        <span id="curso5-nivel">👤 Intermedio</span>
+                    </div>
+                    <div class="curso-precio">
+                        <span id="curso5-precio">GRATIS</span>
+                    </div>
+                    <a href="https://web.dev/learn/" target="_blank" class="btn btn-primary btn-curso"
+                        id="btn-curso5">Explorar</a>
+                </div>
+
+                <div class="curso-card slide-in-up">
+                    <div class="curso-badge" id="curso-badge-6">Especializado</div>
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3 id="curso6-titulo">CS50 de Harvard</h3>
+                    <p id="curso6-desc">Introducción a la ciencia de la computación gratuita.</p>
+                    <div class="curso-info">
+                        <span id="curso6-duracion">⏱️ 12 semanas</span>
+                        <span id="curso6-nivel">👤 Avanzado</span>
+                    </div>
+                    <div class="curso-precio">
+                        <span id="curso6-precio">GRATIS</span>
+                    </div>
+                    <a href="https://pll.harvard.edu/course/cs50-introduction-computer-science" target="_blank"
+                        class="btn btn-primary btn-curso" id="btn-curso6">Inscribirse</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Sección Portafolio -->
+    <section id="portafolio" class="portfolio">
+        <div class="container fade-in-up">
+            <h2 id="portafolio-titulo">Proyectos e Innovación</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item slide-in-left">
+                    <div class="portfolio-image"
+                        style="background-image: url('https://cdn.discordapp.com/attachments/1401631425299747038/1458529111965433887/45D627B2-F2B5-4A20-8456-CE80F253235D.png?ex=695ff896&is=695ea716&hm=5cbc6e6bd48bdd6f8e4f8345a8e3320ecb9bcb8486a545febcc8297e7d5854e7&'); background-size: cover;">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3 id="proyecto1-titulo">XRepot</h3>
+                        <p id="proyecto1-desc">Empresa de tecnología líder en innovación, al mismo nivel de excelencia
+                            que Apple.</p>
+                        <span class="tech-tag">Tecnología: Futuro & Innovación</span>
+                    </div>
+                </div>
+                <div class="portfolio-item slide-in-left">
+                    <div class="portfolio-image"
+                        style="background-image: url('https://cdn.discordapp.com/attachments/1401631425299747038/1458530262211231879/bio.png?ex=695ff9a8&is=695ea828&hm=edb8e79f84a65846209e407d03bb37b4ba96a3ae631ab9d5ef892ec6cbf96bbb&'); background-size: cover;">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3 id="proyecto2-titulo">Mi Portfolio Web</h3>
+                        <p id="proyecto2-desc">Sitio web personal con diseño responsivo y animaciones modernas.</p>
+                        <span class="tech-tag">Tecnología: HTML, CSS, JavaScript</span>
+                    </div>
+                </div>
+                <div class="portfolio-item slide-in-left">
+                    <div class="portfolio-image"
+                        style="background-image: url('https://cdn.discordapp.com/attachments/1401631425299747038/1458527166412099677/outservice.png?ex=695ff6c6&is=695ea546&hm=9a354de06474575d479cfc16f9a9b6406fc547f4632ccb141de32336d7f44b0b&'); background-size: cover;">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3 id="proyecto3-titulo">NONE</h3>
+                        <p id="proyecto3-desc">NONE</p>
+                        <span class="tech-tag">Tecnología: TEST</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Blog -->
+    <section id="blog" class="blog">
+        <div class="container fade-in-up">
+            <h2 id="blog-titulo">Últimos Artículos</h2>
+            <div class="blog-grid">
+                <article class="blog-card slide-in-up">
+                    <div class="blog-date">Nov 2025</div>
+                    <h3 id="blog1-titulo">Guía Completa de JavaScript Moderno</h3>
+                    <p id="blog1-desc">Aprende los conceptos más importantes de JavaScript ES6+ y cómo aplicarlos en tus
+                        proyectos.</p>
+                    <a href="#cursos" id="blog1-btn" class="read-more">Leer más →</a>
+                </article>
+                <article class="blog-card slide-in-up">
+                    <div class="blog-date">Oct 2025</div>
+                    <h3 id="blog2-titulo">Mejores Prácticas en Diseño Web Responsivo</h3>
+                    <p id="blog2-desc">Descubre las mejores prácticas para crear sitios web que se adapten a cualquier
+                        dispositivo.</p>
+                    <a href="#cursos" id="blog2-btn" class="read-more">Leer más →</a>
+                </article>
+                <article class="blog-card slide-in-up">
+                    <div class="blog-date">Sep 2025</div>
+                    <h3 id="blog3-titulo">Introducción a React y Sus Componentes</h3>
+                    <p id="blog3-desc">Una guía para principiantes sobre cómo comenzar con React y sus conceptos
+                        fundamentales.</p>
+                    <a href="#cursos" id="blog3-btn" class="read-more">Leer más →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Donaciones -->
+    <section id="donaciones" class="donations">
+        <div class="container fade-in-up">
+            <h2 id="donaciones-titulo">Apoya mi Proyecto</h2>
+            <p id="donaciones-subtitulo">Ayuda a financiar el desarrollo de XRepot y más proyectos innovadores</p>
+
+            <div class="donation-content">
+                <div class="donation-info">
+                    <h3 id="donation-goal-titulo">¿Por qué donar?</h3>
+                    <ul class="donation-benefits">
+                        <li id="benefit1"><i class="fas fa-check-circle"></i> <span>Apoyo a la innovación
+                                tecnológica</span></li>
+                        <li id="benefit2"><i class="fas fa-check-circle"></i> <span>Desarrollo de nuevas tecnologías
+                                revolucionarias</span></li>
+                        <li id="benefit3"><i class="fas fa-check-circle"></i> <span>Expansión de educación
+                                gratuita</span></li>
+                        <li id="benefit4"><i class="fas fa-check-circle"></i> <span>Hacer el mundo un lugar mejor</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="donation-methods">
+                    <div class="donation-card">
+                        <div class="donation-amount">$5</div>
+                        <p id="donation-basic-titulo">Básico</p>
+                        <p id="donation-basic-desc" class="desc">Apoyo fundamental para XRepot</p>
+                        <a href="https://www.paypal.com/donate?business=jhancielsl@gmail.com&currency_code=USD&amount=5"
+                            target="_blank" class="btn btn-primary donation-btn">Donar $5</a>
+                    </div>
+
+                    <div class="donation-card featured">
+                        <div class="popular-badge" id="popular-badge">Popular</div>
+                        <div class="donation-amount">$25</div>
+                        <p id="donation-standard-titulo">Estándar</p>
+                        <p id="donation-standard-desc" class="desc">Impulsa nuestra innovación</p>
+                        <a href="https://www.paypal.com/donate?business=jhancielsl@gmail.com&currency_code=USD&amount=25"
+                            target="_blank" class="btn btn-primary donation-btn">Donar $25</a>
+                    </div>
+
+                    <div class="donation-card">
+                        <div class="donation-amount">$100</div>
+                        <p id="donation-premium-titulo">Premium</p>
+                        <p id="donation-premium-desc" class="desc">Conviértete en un pilar del cambio</p>
+                        <a href="https://www.paypal.com/donate?business=jhancielsl@gmail.com&currency_code=USD&amount=100"
+                            target="_blank" class="btn btn-primary donation-btn">Donar $100</a>
+                    </div>
+                </div>
+
+
+                <div class="payment-methods">
+                    <p id="metodos-pago">Métodos de donaciones disponibles:</p>
+                    <div class="payment-icons">
+                        <i class="fab fa-cc-paypal"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="donors-section">
+                <h3 id="donantes-titulo">Gracias a Nuestros Visionarios</h3>
+                <p id="donantes-desc">Su apoyo hace posible la revolución tecnológica de XRepot.</p>
+                <div class="donors-list">
+                    <div class="donor-item">
+                        <span>❤️</span>
+                        <p id="donor-anonymous">Donante Anónimo</p>
+                    </div>
+                    <div class="donor-item">
+                        <span>⭐</span>
+                        <p id="donor-supporter">Visionario Tecnológico</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="contact">
+        <div class="container fade-in-up">
+            <h2 id="contacto-titulo">Ponte en Contacto</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3 id="email-titulo">Email</h3>
+                            <p><a href="mailto:Jhancielsl@gmail.com">Jhancielsl@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3 id="ubicacion-titulo">Ubicación</h3>
+                            <p>Moca Las Lagunas, República Dominicana</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-mobile-alt"></i>
+                        <div>
+                            <h3 id="redes-titulo">Redes Sociales</h3>
+                            <div class="social-links">
+                                <a href="https://instagram.com/santana_jhanciel" id="instagram-link" target="_blank">
+                                    <i class="fab fa-instagram"></i> Instagram
+                                </a>
+                                <a href="https://twitter.com/" id="twitter-link" target="_blank">
+                                    <i class="fa-brands fa-x-twitter"></i> X
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-content">
+            <p id="footer-copyright">&copy; 2025 Jhanciel F Santana Leon. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <a href="privacy.html" id="footer-privacy">Sobre mi página</a>
+                <a href="terms.html" id="footer-terms">Términos de la visita</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal para ver imágenes más grandes -->
+    <div id="modal-imagen" class="modal" onclick="cerrarModal()">
+        <span class="close" onclick="cerrarModal()">&times;</span>
+        <img class="modal-content" id="img-modal">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
